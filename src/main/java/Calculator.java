@@ -18,4 +18,18 @@ public class Calculator
         }
         return (int)result;
     }
+
+
+    public int div(int firstNum, int secondNum)
+    {
+
+        if(secondNum ==0)
+        {
+            throw new ArithmeticException("Input cannot divide by zero");
+        }
+        long result =(long)firstNum/secondNum;
+        return (int)result;
+    }
+
+
 }

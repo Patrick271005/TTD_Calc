@@ -34,6 +34,20 @@ public class CalculatorTest {
         assertEquals("Input cannot be negative", ex.getMessage());
     }
 
+    @Test
+    void testDivSuccess()
+    {
+        assertEquals(5,myCalc.div(10,2));
+    }
+    @Test
+    void testDivFail()
+    {
+        Exception ex=assertThrows(ArithmeticException.class,()->{myCalc.div(10,0);});
+        assertEquals("Input cannot divide by zero", ex.getMessage());
+    }
+
+
+
 
 
 }
