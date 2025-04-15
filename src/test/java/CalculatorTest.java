@@ -45,7 +45,18 @@ public class CalculatorTest {
         Exception ex=assertThrows(ArithmeticException.class,()->{myCalc.div(10,0);});
         assertEquals("Input cannot divide by zero", ex.getMessage());
     }
+    @Test
+    void testMultiplySuccess()
+    {
+        assertEquals(20, myCalc.multiply(4, 5));
+    }
 
+    @Test
+    void testMultiplyFail()
+    {
+        Exception ex = assertThrows(ArithmeticException.class, () -> { myCalc.multiply(Integer.MAX_VALUE, 2);  });
+        assertEquals("Multiplication result too large", ex.getMessage());
+    }
 
 
 

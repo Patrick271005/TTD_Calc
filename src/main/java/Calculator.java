@@ -31,5 +31,14 @@ public class Calculator
         return (int)result;
     }
 
+    public int multiply(int firstNum, int secondNum)
+    {
+        long result = (long) firstNum * secondNum;
+        if(result > Integer.MAX_VALUE)
+        {
+            throw new ArithmeticException("Multiplication result too large");
+        }
+        return (int) result;
+    }
 
 }
